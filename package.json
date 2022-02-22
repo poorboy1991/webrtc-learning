@@ -1,0 +1,17 @@
+{
+  "name": "webrtc-learning",
+  "private": true,
+  "workspaces": ["web", "app", "server"],
+  "scripts": {
+    "web": "cd web && yarn run start",
+    "server:sfu": "cd server && yarn run start:sfu",
+    "server": "cd server && yarn run start",
+    "server:https": "cd server && yarn run start:https"
+
+  },
+  "version": "1.0.0",
+  "description": "webrtc sfu p2p",
+  "main": "index.js",
+  "author": "xiangkai",
+  "license": "MIT"
+}
