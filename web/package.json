@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack server --color --progress --config ./scripts/webpack.dev.config.js"
+    "start": "webpack server --color --progress --config ./scripts/webpack.dev.config.js",
+    "build": "npm run build:prod",
+    "build:prod": "webpack --config scripts/webpack.base.config.js"
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",

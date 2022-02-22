@@ -4,6 +4,7 @@
   "workspaces": ["web", "app", "server"],
   "scripts": {
     "web": "cd web && yarn run start",
+    "web:build": "cd web && yarn run build",
     "server:sfu": "cd server && yarn run start:sfu",
     "server": "cd server && yarn run start",
     "server:https": "cd server && yarn run start:https"

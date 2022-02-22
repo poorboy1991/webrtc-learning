@@ -1,6 +1,6 @@
 import React, {useState, useLayoutEffect} from 'react'
 import {Button, Form, Input} from 'antd'
-import './index.less'
+import style from './index.less'
 
 const FormItem = Form.Item
 
