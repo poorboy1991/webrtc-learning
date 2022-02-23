@@ -1,8 +1,8 @@
 const webpackBar = require('webpackbar')
-const copyPlugin = require('copy-webpack-plugin')
 const HappyPack = require('happypack')
 const antdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
 const speedMeasurePlugin = require('speed-measure-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodePolyFillPlugin = require('node-polyfill-webpack-plugin')
 const webpack = require('webpack')
 const {resolve} = require('./utils')
@@ -85,18 +85,6 @@ module.exports = {
         new HappyPack({
             loaders: ["babel-loader"],
         }),
-        new nodePolyFillPlugin(),
-        new copyPlugin({
-            patterns: [
-                {
-                    from : './public/**/*',
-                    to: './',
-                    globOptions: {
-                        ignore: ["**/favicon.png", "**/index.html"],
-                      },
-                    noErrorOnMissing: true,
-                }
-            ]
-        })
+        new nodePolyFillPlugin()
     ]
 }
